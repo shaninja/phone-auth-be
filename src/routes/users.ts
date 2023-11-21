@@ -8,7 +8,6 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
 
 const router: Router = Router()
 
-// TODO extract this to a place that can be used for the FE and BE alike?
 const firebaseConfig = {
   apiKey: 'AIzaSyBOYVQZkD49hYqnLEYZxGJM7QI1V0-s4rk',
   authDomain: 'phone-auth-12.firebaseapp.com',
@@ -26,7 +25,8 @@ const db = admin.firestore()
 
 router.post('/updateUserDetails', async (req: Request, res: Response) => {
   try {
-    // TODO add server side validation for the fields, preferably use a validation library (for example Joi)
+    // TODO add server side validation and sanitation for the fields,
+    // preferably use a validation library (for example Joi)
     const { name, email, phone } = req.body
     const userRef = db.collection('users').doc(phone)
     const doc = await userRef.get()

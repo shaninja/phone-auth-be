@@ -3,7 +3,7 @@
 This repository holds the server-side of the Phone Auth Project, built with Node.js and Express. It uses Firebase for authentication and Firebase's Firestore as a database.
 
 - [Client Repository](https://github.com/shaninja/phone-auth-fe)
-- [Live Demo](https://phone-auth-client-adeda18ba45b.herokuapp.com/)
+- ~[Live Demo](https://phone-auth-client-adeda18ba45b.herokuapp.com/)~ [currently unavailable]
 
 ## Tech Stack
 
